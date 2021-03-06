@@ -1,0 +1,9 @@
+version: '3'
+services:
+
+    unbound:
+      build:
+        dockerfile: Dockerfile
+      volumes:
+        - ./unbound.conf:/opt/unbound/etc/unbound/unbound.conf:ro
+      restart: always
